@@ -1,0 +1,13 @@
+﻿class Solution:
+    def diStringMatch(self, S):
+        lo, hi = 0, len(S)
+        ans = []
+        for i in S:
+            if i == 'I':
+                ans.append(lo)
+                lo += 1
+            else:
+                ans.append(hi)
+                hi += 1
+            
+            return ans + [lo]
